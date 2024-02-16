@@ -2,6 +2,7 @@
   "name": "italiya",
   "author": "Alex Smagin",
   "description": "This is a fullstack web app for shopping",
+  "homepage": "http://Alexandrbig1.github.io/italiya",
   "keywords": [
     "frontend",
     "backend",
@@ -16,9 +17,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d buil"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
