@@ -27,6 +27,8 @@ const theme = {
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const Cart = lazy(() => import("../pages/Cart/Cart"));
+const SignIn = lazy(() => import("../pages/SignIn/SignIn"));
+const SignUp = lazy(() => import("../pages/SignUp/SignUp"));
 const Privacy = lazy(() => import("../pages/Privacy/Privacy"));
 const Terms = lazy(() => import("../pages/Terms/Terms"));
 const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
@@ -52,6 +54,18 @@ function App() {
         <Route
           path="cart"
           element={<Cart toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />}
+        />
+        <Route
+          path="signin"
+          element={
+            <SignIn toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+          }
+        />
+        <Route
+          path="signup"
+          element={
+            <SignUp toggleTheme={toggleTheme} isDarkTheme={isDarkTheme} />
+          }
         />
         <Route
           path="privacy"
