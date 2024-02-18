@@ -59,6 +59,7 @@ function App() {
 
   function toggleTheme(e) {
     const themeValue = e.currentTarget.getAttribute("data-theme");
+    console.log(themeValue);
     setCurrentTheme(themeValue);
     localStorage.setItem("italiya-theme", themeValue);
   }

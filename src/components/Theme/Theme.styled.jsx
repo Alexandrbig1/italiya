@@ -54,6 +54,8 @@ export const ThemeModal = styled.div`
   border-radius: 0.8rem;
   background-color: lightgrey;
 
+  z-index: 5;
+
   border: 1px solid grey;
 `;
 
