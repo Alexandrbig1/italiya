@@ -53,14 +53,14 @@ const NotFound = lazy(() => import("../pages/NotFound/NotFound"));
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState(() => {
-    const savedTheme = localStorage.getItem("theme");
+    const savedTheme = localStorage.getItem("italiya-theme");
     return savedTheme || "dark";
   });
 
   function toggleTheme(e) {
     const themeValue = e.currentTarget.getAttribute("data-theme");
     setCurrentTheme(themeValue);
-    localStorage.setItem("theme", themeValue);
+    localStorage.setItem("italiya-theme", themeValue);
   }
 
   const router = createBrowserRouter(
