@@ -15,7 +15,10 @@ const themes = {
     colors: {
       mainTextColor: "#242424",
       mainBgColor: "#f8f9fa",
-      mainHeaderBg: "#f8f9fa",
+      mainHeaderBg: "#FCFCFC",
+      mainHeaderTextColor: "#161616",
+      mainHeaderTextColorHover: "#f76707",
+      themeModalBg: "#e9ecef",
       accentColor: "#f76707",
       white: "#fff",
       black: "#121212",
@@ -25,7 +28,10 @@ const themes = {
     colors: {
       mainTextColor: "#fafafa",
       mainBgColor: "#242424",
-      mainHeaderBg: "#242424",
+      mainHeaderBg: "#161616",
+      mainHeaderTextColor: "#fafafa",
+      mainHeaderTextColorHover: "#f76707",
+      themeModalBg: "#242424",
       accentColor: "#f76707",
       white: "#fff",
       black: "#121212",
@@ -35,7 +41,10 @@ const themes = {
     colors: {
       mainTextColor: "#fafafa",
       mainBgColor: "#242424",
-      mainHeaderBg: "#242424",
+      mainHeaderBg: "#f77f00",
+      mainHeaderTextColor: "#161616",
+      mainHeaderTextColorHover: "#f76707",
+      themeModalBg: "#fafafa",
       accentColor: "#f76707",
       white: "#fff",
       black: "#121212",
@@ -59,7 +68,6 @@ function App() {
 
   function toggleTheme(e) {
     const themeValue = e.currentTarget.getAttribute("data-theme");
-    console.log(themeValue);
     setCurrentTheme(themeValue);
     localStorage.setItem("italiya-theme", themeValue);
   }

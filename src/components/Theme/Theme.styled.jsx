@@ -19,31 +19,21 @@ export const ThemeWrapper = styled.div`
 `;
 
 export const ThemeMainText = styled.p`
-  color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
   font-size: 1.8rem;
 `;
 
 export const ThemeIconArrowDown = styled(MdOutlineKeyboardArrowDown)`
   font-size: 1.8rem;
-  color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
 `;
 
 export const ThemeIconArrowUp = styled(MdOutlineKeyboardArrowUp)`
   font-size: 1.8rem;
-  color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
 `;
 
-export const ThemeText = styled.p`
-  color: ${(p) => p.theme.colors.white};
-  font-size: 1.8rem;
-
-  transition: all var(--primary-transition);
-
-  &:hover {
-    color: ${(p) => p.theme.colors.black};
-    cursor: pointer;
-  }
-`;
+export const ThemeText = styled.p``;
 
 export const ThemeModal = styled.div`
   position: absolute;
@@ -52,24 +42,41 @@ export const ThemeModal = styled.div`
   width: 100%;
   padding: 1.2rem;
   border-radius: 0.8rem;
-  background-color: lightgrey;
+  background-color: ${(p) => p.theme.colors.themeModalBg};
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
 
   z-index: 5;
-
-  border: 1px solid grey;
 `;
 
 export const IconSun = styled(FiSun)`
   font-size: 2.4rem;
-  color: ${(p) => p.theme.colors.black};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  transition: all var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.mainHeaderTextColorHover};
+  }
 `;
 
 export const IconMoon = styled(FiMoon)`
   font-size: 2.4rem;
-  color: ${(p) => p.theme.colors.black};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  transition: all var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.mainHeaderTextColorHover};
+  }
 `;
 
 export const IconCat = styled(PiCatLight)`
   font-size: 2.4rem;
-  color: ${(p) => p.theme.colors.black};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  transition: all var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.mainHeaderTextColorHover};
+  }
 `;

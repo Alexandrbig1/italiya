@@ -21,7 +21,7 @@ export const HeaderMenuWrapper = styled.div`
 
 export const HeaderMenuText = styled.p`
   font-size: 1.6rem;
-  color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
 
   &:hover {
     cursor: pointer;
