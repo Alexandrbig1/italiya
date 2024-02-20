@@ -6,6 +6,9 @@ import {
   FooterWrapper,
   FooterBottom,
   PrivacyWrapper,
+  PrivacyLink,
+  TermsLink,
+  FooterText,
 } from "./Footer.styled";
 
 function Footer() {
@@ -19,10 +22,10 @@ function Footer() {
           </div>
         </FooterWrapper>
         <FooterBottom>
-          <p>©2024 Italiya. All rights reserved.</p>
+          <FooterText>©2024 Italiya. All rights reserved.</FooterText>
           <PrivacyWrapper>
-            <p>Privacy Policy</p>
-            <p>Terms of Service</p>
+            <PrivacyLink to="privacy">Privacy Policy</PrivacyLink> /
+            <TermsLink to="terms">Terms of Service</TermsLink>
           </PrivacyWrapper>
         </FooterBottom>
       </Container>

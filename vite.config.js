@@ -20,4 +20,7 @@ export default defineConfig({
       "@": "/src",
     },
   },
+  esbuild: {
+    jsxInject: `import React from 'react'`,
+  },
 });

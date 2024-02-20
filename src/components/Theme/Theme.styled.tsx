@@ -5,6 +5,32 @@ import {
 } from "react-icons/md";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { PiCatLight } from "react-icons/pi";
+import { secondaryFont } from "../fonts";
+
+export const ThemeIconArrowDown = styled(MdOutlineKeyboardArrowDown)`
+  font-size: 1.8rem;
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  transition: all var(--primary-transition);
+
+  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+`;
+
+export const ThemeIconArrowUp = styled(MdOutlineKeyboardArrowUp)`
+  font-size: 1.8rem;
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  transition: all var(--primary-transition);
+
+  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+`;
+export const ThemeMainText = styled.p`
+  font-size: 1.6rem;
+  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+  font-family: ${secondaryFont};
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  transition: all var(--primary-transition);
+`;
 
 export const ThemeWrapper = styled.div`
   display: flex;
@@ -15,22 +41,16 @@ export const ThemeWrapper = styled.div`
 
   &:hover {
     cursor: pointer;
+    ${ThemeMainText} {
+      color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    }
+    ${ThemeIconArrowDown} {
+      color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    }
+    ${ThemeIconArrowUp} {
+      color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    }
   }
-`;
-
-export const ThemeMainText = styled.p`
-  color: ${(p) => p.theme.colors.mainHeaderTextColor};
-  font-size: 1.8rem;
-`;
-
-export const ThemeIconArrowDown = styled(MdOutlineKeyboardArrowDown)`
-  font-size: 1.8rem;
-  color: ${(p) => p.theme.colors.mainHeaderTextColor};
-`;
-
-export const ThemeIconArrowUp = styled(MdOutlineKeyboardArrowUp)`
-  font-size: 1.8rem;
-  color: ${(p) => p.theme.colors.mainHeaderTextColor};
 `;
 
 export const ThemeText = styled.p``;

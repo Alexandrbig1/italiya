@@ -17,11 +17,20 @@ const themes = {
       mainBgColor: "#f8f9fa",
       mainHeaderBg: "#FCFCFC",
       mainHeaderTextColor: "#161616",
+      mainHeaderTextColorLowOp: "rgb(22, 22, 22, 0.5)",
       mainHeaderTextColorHover: "#f76707",
       themeModalBg: "#e9ecef",
       accentColor: "#f76707",
+      mainLogoTextColor: "#242424",
+      mainLogoTextColorLowOp: "rgb(36, 36, 36, 0.1)",
+      mainLogoColor: "#f76707",
       white: "#fff",
       black: "#121212",
+      signInBgBtn: "#43aa8b",
+      signInBgHoverBtn: "#36886f",
+      signUpBgBtn: "#f76707",
+      signUpBgHoverBtn: "#dc2f02",
+      signTextBtn: "#f8f9fa",
     },
   },
   dark: {
@@ -30,30 +39,49 @@ const themes = {
       mainBgColor: "#242424",
       mainHeaderBg: "#161616",
       mainHeaderTextColor: "#fafafa",
+      mainHeaderTextColorLowOp: "rgb(248, 249, 250, 0.5)",
       mainHeaderTextColorHover: "#f76707",
       themeModalBg: "#242424",
       accentColor: "#f76707",
+      mainLogoTextColor: "#f8f9fa",
+      mainLogoTextColorLowOp: "rgb(248, 249, 250, 0.1)",
+      mainLogoColor: "#f76707",
       white: "#fff",
       black: "#121212",
+      signInBgBtn: "#43aa8b",
+      signInBgHoverBtn: "#36886f",
+      signUpBgBtn: "#f76707",
+      signUpBgHoverBtn: "#dc2f02",
+      signTextBtn: "#f8f9fa",
     },
   },
   cats: {
     colors: {
       mainTextColor: "#fafafa",
-      mainBgColor: "#242424",
+      mainBgColor: "#fb8500",
       mainHeaderBg: "#f77f00",
       mainHeaderTextColor: "#161616",
+      mainHeaderTextColorLowOp: "rgb(22, 22, 22, 0.5)",
       mainHeaderTextColorHover: "#f76707",
       themeModalBg: "#fafafa",
       accentColor: "#f76707",
+      mainLogoTextColor: "#242424",
+      mainLogoTextColorLowOp: "rgb(36, 36, 36, 0.1)",
+      mainLogoColor: "#dc2f02",
       white: "#fff",
       black: "#121212",
+      signInBgBtn: "#43aa8b",
+      signInBgHoverBtn: "#36886f",
+      signUpBgBtn: "#dc2f02",
+      signUpBgHoverBtn: "#ff5400",
+      signTextBtn: "#f8f9fa",
     },
   },
 };
 
 const Home = lazy(() => import("../pages/Home/Home"));
 const Cart = lazy(() => import("../pages/Cart/Cart"));
+const Products = lazy(() => import("../pages/Products/Products"));
 const SignIn = lazy(() => import("../pages/SignIn/SignIn"));
 const SignUp = lazy(() => import("../pages/SignUp/SignUp"));
 const Privacy = lazy(() => import("../pages/Privacy/Privacy"));
@@ -78,8 +106,14 @@ function App() {
         path="/italiya/"
         element={<RootLayout toggleTheme={toggleTheme} />}
       >
-        <Route index element={<Home toggleTheme={toggleTheme} />} />
+        <Route path="" element={<Home toggleTheme={toggleTheme} />}>
+          <Route
+            path="products"
+            element={<Products toggleTheme={toggleTheme} />}
+          />
+        </Route>
         <Route path="cart" element={<Cart toggleTheme={toggleTheme} />} />
+
         <Route path="signin" element={<SignIn toggleTheme={toggleTheme} />} />
         <Route path="signup" element={<SignUp toggleTheme={toggleTheme} />} />
         <Route path="privacy" element={<Privacy toggleTheme={toggleTheme} />} />

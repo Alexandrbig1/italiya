@@ -17,11 +17,11 @@ function Header({ toggleTheme }) {
         <HeaderWrapper>
           <Logo />
           <HeaderMenuWrapper>
-            <HeaderMenuText>About</HeaderMenuText>
-            <HeaderMenuText>Gallery</HeaderMenuText>
+            <HeaderMenuText to="/italiya/">About</HeaderMenuText>
+            <HeaderMenuText to="products">Products</HeaderMenuText>
             <Theme toggleTheme={toggleTheme} />
-            <SignIn>Sign In</SignIn>
-            <SignUp>Sign Up</SignUp>
+            <SignIn to="signin">Sign In</SignIn>
+            <SignUp to="signup">Sign Up</SignUp>
           </HeaderMenuWrapper>
         </HeaderWrapper>
       </Container>
