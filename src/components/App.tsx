@@ -14,7 +14,11 @@ const themes = {
   light: {
     colors: {
       mainTextColor: "#242424",
-      mainBgColor: "#f8f9fa",
+      mainCardsTextColor: "#242424",
+      mainBgColor: "#efede8",
+      // mainBgColor: "#f8f9fa",
+      mainBgColorLowOp: "rgb(248, 249, 250, 0.7)",
+      scrollBgColor: "rgb(36, 36, 36, 0.3)",
       mainHeaderBg: "#FCFCFC",
       mainHeaderTextColor: "#161616",
       mainHeaderTextColorLowOp: "rgb(22, 22, 22, 0.5)",
@@ -36,7 +40,10 @@ const themes = {
   dark: {
     colors: {
       mainTextColor: "#fafafa",
+      mainCardsTextColor: "#fafafa",
       mainBgColor: "#242424",
+      mainBgColorLowOp: "rgb(36, 36, 36, 0.7)",
+      scrollBgColor: "rgb(248, 249, 250, 0.3)",
       mainHeaderBg: "#161616",
       mainHeaderTextColor: "#fafafa",
       mainHeaderTextColorLowOp: "rgb(248, 249, 250, 0.5)",
@@ -58,7 +65,10 @@ const themes = {
   cats: {
     colors: {
       mainTextColor: "#fafafa",
+      mainCardsTextColor: "#fafafa",
       mainBgColor: "#fb8500",
+      mainBgColorLowOp: "rgb(251, 133, 0, 0.7)",
+      scrollBgColor: "rgb(36, 36, 36, 0.3)",
       mainHeaderBg: "#f77f00",
       mainHeaderTextColor: "#161616",
       mainHeaderTextColorLowOp: "rgb(22, 22, 22, 0.5)",

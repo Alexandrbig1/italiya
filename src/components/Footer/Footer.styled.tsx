@@ -7,8 +7,9 @@ export const FooterContainer = styled.footer`
   margin: 0 auto;
   background-color: ${(p) => p.theme.colors.mainHeaderBg};
 `;
+
 export const FooterWrapper = styled.div`
-  padding: 2.4rem 0;
+  padding: 4.8rem 0 2.4rem;
   display: flex;
   align-items: center;
   justify-content: space-between;

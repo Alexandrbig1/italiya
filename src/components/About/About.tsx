@@ -7,9 +7,9 @@ import {
   AboutTitle,
   AboutText,
   ProductsBtn,
+  AboutHomeWrapper,
 } from "./About.styled";
 import { Link, Outlet, useLocation } from "react-router-dom";
-import Products from "../../pages/Products/Products";
 
 export default function About() {
   const location = useLocation();
@@ -29,7 +29,7 @@ export default function About() {
       </ImgWrapper>
       <AboutTextWrapper>
         {isHomePage ? (
-          <>
+          <AboutHomeWrapper>
             <AboutTitle>
               Meet Italiya: The Purrsonality Behind Whisker Wonders
             </AboutTitle>
@@ -44,7 +44,7 @@ export default function About() {
             <ProductsBtn>
               <Link to="products">showproducts</Link>
             </ProductsBtn>
-          </>
+          </AboutHomeWrapper>
         ) : (
           <Suspense>
             <Outlet />

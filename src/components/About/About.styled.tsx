@@ -8,10 +8,14 @@ export const AboutContainer = styled.div`
   gap: 4.8rem;
 
   padding: 4.8rem 0;
+
+  width: 100%;
+  height: 100%;
 `;
 
 export const ImgWrapper = styled.div`
   border-radius: 0.8rem;
+  height: 66.4rem;
 `;
 
 export const Image = styled.img`
@@ -22,8 +26,9 @@ export const Image = styled.img`
 `;
 
 export const AboutTextWrapper = styled.div`
-  padding: 5.6rem 2.4rem;
+  /* padding: 5.6rem 2.4rem; */
   border-radius: 0.8rem;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -36,6 +41,11 @@ export const AboutTextWrapper = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+`;
+
+export const AboutHomeWrapper = styled.div`
+  padding: 0 2.4rem;
+  margin-top: 5.6rem;
 `;
 
 export const AboutTitle = styled.h1`
