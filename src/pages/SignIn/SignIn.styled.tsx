@@ -165,14 +165,15 @@ export const TextFieldStyled = styled(TextField)`
     line-height: normal;
     letter-spacing: -0.28px;
     border-radius: 4px;
+    transition: all var(--primary-transition);
+
     outline: 1px solid
       ${(p) =>
-        p.error ? p.theme.colors.errorColor : p.theme.colors.accentColor};
+        p.error ? p.theme.colors.errorColor : p.theme.colors.inputColor};
     box-shadow: 0px 4px 16px 0px rgba(22, 22, 22, 0.08);
 
     &:focus-within {
       outline: none;
-      /* border: 1px solid transparent; */
     }
 
     &::placeholder {
@@ -184,6 +185,22 @@ export const TextFieldStyled = styled(TextField)`
       letter-spacing: -0.28px;
       font-size: 1.4rem;
     }
+  }
+
+  fieldset {
+    border: 1px solid
+      ${(p) =>
+        p.error ? p.theme.colors.errorColor : p.theme.colors.inputColor};
+  }
+
+  &:hover fieldset {
+    border: none;
+  }
+
+  &:focus-within fieldset {
+    border: 1px solid
+      ${(p) =>
+        p.error ? p.theme.colors.errorColor : p.theme.colors.inputColor};
   }
 `;
 
@@ -208,7 +225,7 @@ export const EyeIconWrapper = styled.span`
 
   transform: translateY(-35%);
   font-size: 2rem;
-  color: ${(p) => p.theme.colors.white};
+  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
 
   &:hover {
     cursor: pointer;
@@ -219,7 +236,7 @@ export const SignInErrorMessage = styled.p`
   position: absolute;
   top: -0.4rem;
   right: 0;
-  color: red;
+  color: ${(p) => p.theme.colors.errorColor};
   font-size: 1rem;
 
   @media (min-width: 768px) {

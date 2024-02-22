@@ -1,25 +1,25 @@
-// import * as React from "react";
 import Box from "@mui/material/Box";
-// import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
+import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import { FieldWrapper } from "../SignUp/SignUp.styled";
-// import emailRegex from "../../regex/emailRegex";
+import emailRegex from "../../regex/emailRegex";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import {
   BoxStyled,
   ButtonEl,
   ButtonStyled,
   ContainerStyled,
-  // EyeIconWrapper,
+  EyeIconWrapper,
   LinkStyled,
   TextFieldStyled,
   TypoStyled,
   TypoTitleStyled,
   EyePasswordWrap,
-  // SignInErrorMessage,
+  SignInErrorMessage,
   RegistrationLink,
   BtnLogInSpan,
 } from "./SignIn.styled";
+import { useState } from "react";
 
 const customTheme = createTheme({
   breakpoints: {
@@ -56,12 +56,12 @@ function Copyright(props) {
 }
 
 export default function SignIn() {
-  // const [showPassword, setShowPassword] = React.useState(false);
-  // const [errors, setErrors] = React.useState({});
+  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  // const handleClickShowPassword = () => {
-  //   setShowPassword(!showPassword);
-  // };
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -148,14 +148,14 @@ export default function SignIn() {
                   position: "relative",
                 }}
               >
-                <RegistrationLink to="/italiya/signup">
-                  {/* <RegistrationLink href="signup" variant="body2"> */}
-                  Sign Up
-                </RegistrationLink>
                 <TypoTitleStyled variant="h5">
                   {/* <TypoTitleStyled component="h1" variant="h5"> */}
                   Sign In
                 </TypoTitleStyled>
+                <RegistrationLink to="/italiya/signup">
+                  {/* <RegistrationLink href="signup" variant="body2"> */}
+                  Sign Up
+                </RegistrationLink>
                 {/* <Google /> */}
               </Box>
               <Box
@@ -177,11 +177,11 @@ export default function SignIn() {
                     name="email"
                     autoComplete="email"
                     autoFocus
-                    // error={errors.email ? true : false}
+                    error={errors.email ? true : false}
                   />
-                  {/* {errors.email && (
+                  {errors.email && (
                     <SignInErrorMessage>{errors.email}</SignInErrorMessage>
-                  )} */}
+                  )}
                 </FieldWrapper>
 
                 <EyePasswordWrap>
@@ -194,15 +194,15 @@ export default function SignIn() {
                     name="password"
                     id="password"
                     autoComplete="current-password"
-                    // type={showPassword ? "text" : "password"}
-                    // error={errors.password ? true : false}
+                    type={showPassword ? "text" : "password"}
+                    error={errors.password ? true : false}
                   />
-                  {/* {errors.password && (
+                  {errors.password && (
                     <SignInErrorMessage>{errors.password}</SignInErrorMessage>
                   )}
                   <EyeIconWrapper onClick={handleClickShowPassword}>
                     {showPassword ? <BsFillEyeSlashFill /> : <BsFillEyeFill />}
-                  </EyeIconWrapper> */}
+                  </EyeIconWrapper>
                 </EyePasswordWrap>
                 <ButtonStyled>
                   <ButtonEl type="submit" color="inherit">

@@ -1,16 +1,15 @@
-// import * as React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-// import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
+import { BsFillEyeSlashFill, BsFillEyeFill } from "react-icons/bs";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-// import emailRegex from "../../regex/emailRegex";
+import emailRegex from "../../regex/emailRegex";
 // import { Link } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import {
   BoxSignUpStyled,
   ContainerSignUpStyled,
-  // ErrorMessage,
-  // EyeIconSignUpWrapper,
+  ErrorMessage,
+  EyeIconSignUpWrapper,
   EyePasswordSignUpWrap,
   LinkSignUpStyled,
   SignUpButtonEl,
@@ -21,8 +20,9 @@ import {
   LoginLink,
   BtnSpan,
   FieldWrapper,
-  // PasswordErrorMessage,
+  PasswordErrorMessage,
 } from "./SignUp.styled";
+import { useState } from "react";
 
 const customTheme = createTheme({
   breakpoints: {
@@ -59,12 +59,12 @@ function Copyright(props) {
 }
 
 export default function SignUp() {
-  // const [showPassword, setShowPassword] = React.useState(false);
-  // const [errors, setErrors] = React.useState({});
+  const [showPassword, setShowPassword] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  // const handleClickShowPassword = () => {
-  //   setShowPassword(!showPassword);
-  // };
+  const handleClickShowPassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -156,12 +156,12 @@ export default function SignUp() {
                   position: "relative",
                 }}
               >
-                <TypoTitleSignUpStyled component="h1" variant="h5">
-                  Sign Up
-                </TypoTitleSignUpStyled>
                 <LoginLink to="/italiya/signin" variant="body2">
                   Sign In
                 </LoginLink>
+                <TypoTitleSignUpStyled component="h1" variant="h5">
+                  Sign Up
+                </TypoTitleSignUpStyled>
                 {/* <Google /> */}
               </Box>
               <Box
@@ -184,11 +184,11 @@ export default function SignUp() {
                         id="name"
                         placeholder="Enter your name"
                         autoFocus
-                        // error={errors.name ? true : false}
+                        error={errors.name ? true : false}
                       />
-                      {/* {errors.name && (
+                      {errors.name && (
                         <ErrorMessage>{errors.name}</ErrorMessage>
-                      )} */}
+                      )}
                     </FieldWrapper>
                   </Grid>
                   <Grid item xs={12} style={{ marginTop: "0.4rem" }}>
@@ -200,11 +200,11 @@ export default function SignUp() {
                         placeholder="Enter your email"
                         name="email"
                         autoComplete="email"
-                        // error={errors.email ? true : false}
+                        error={errors.email ? true : false}
                       />
-                      {/* {errors.email && (
+                      {errors.email && (
                         <ErrorMessage>{errors.email}</ErrorMessage>
-                      )} */}
+                      )}
                     </FieldWrapper>
                   </Grid>
                   <Grid item xs={12} style={{ position: "relative" }}>
@@ -218,23 +218,22 @@ export default function SignUp() {
                         name="password"
                         id="password"
                         autoComplete="new-password"
-                        // type={showPassword ? "text" : "password"}
-                        // error={errors.password ? true : false}
+                        type={showPassword ? "text" : "password"}
+                        error={errors.password ? true : false}
                       />
-                      {/* 
+
                       {errors.password && (
                         <PasswordErrorMessage>
                           {errors.password}
                         </PasswordErrorMessage>
-                      )} */}
-
-                      {/* <EyeIconSignUpWrapper onClick={handleClickShowPassword}>
+                      )}
+                      <EyeIconSignUpWrapper onClick={handleClickShowPassword}>
                         {showPassword ? (
                           <BsFillEyeSlashFill />
                         ) : (
                           <BsFillEyeFill />
                         )}
-                      </EyeIconSignUpWrapper> */}
+                      </EyeIconSignUpWrapper>
                     </EyePasswordSignUpWrap>
                   </Grid>
                 </Grid>
