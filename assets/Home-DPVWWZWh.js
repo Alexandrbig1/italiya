@@ -1,4 +1,4 @@
-import{u as r,r as t,p as i,a,j as e,L as s,b as c,O as l,C as d}from"./index-ngsRXlBp.js";const m="/italiya/assets/paws-CFqkmwH1.png",h=r.div`
+import{u as r,r as t,p as i,a,j as e,L as s,b as c,O as l,C as d}from"./index-CcZWFtyy.js";const m="/italiya/assets/paws-CFqkmwH1.png",h=r.div`
   display: grid;
   grid-template-columns: 1.5fr 2.5fr;
   gap: 4.8rem;
