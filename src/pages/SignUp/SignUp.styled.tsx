@@ -6,6 +6,7 @@ import Link from "@mui/material/Link";
 import Typography from "@mui/material/Typography";
 import TextField from "@mui/material/TextField";
 import { primaryFont } from "../../components/fonts";
+import { Link as StyledLink } from "react-router-dom";
 
 export const ContainerSignUpStyled = styled(Container)`
   display: flex;
@@ -18,10 +19,10 @@ export const ContainerSignUpStyled = styled(Container)`
   padding: 1.2rem;
   overflow-x: hidden;
 
-  background: linear-gradient(
-    180deg,
-    rgba(196, 196, 196, 0) 25%,
-    ${(p) => p.theme.colors.accentColor} 92.19%
+  background: radial-gradient(
+    circle,
+    rgba(196, 196, 196, 0) 2%,
+    ${(p) => p.theme.colors.mainBgColor} 98%
   );
 `;
 
@@ -32,7 +33,7 @@ export const BoxSignUpStyled = styled(Box)`
   margin: 0 auto;
 
   border-radius: 8px;
-  background: #151515;
+  background: ${(p) => p.theme.colors.mainBgColor};
   padding: 2.4rem;
   max-width: 300px;
 
@@ -78,15 +79,15 @@ export const SignUpButtonStyled = styled.div`
   outline: none;
   border-radius: 8px;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-  transition: 0.3s ease-in-out;
+  transition: all var(--primary-transition);
 
   &:hover {
-    background-color: ${(p) => p.theme.colors.accentColor};
+    background-color: ${(p) => p.theme.colors.signUpBgHoverBtn};
   }
 `;
 
 export const BtnSpan = styled.span`
-  color: ${(p) => p.theme.colors.blackColor};
+  color: ${(p) => p.theme.colors.white};
   font-family: ${primaryFont};
   font-size: 1.4rem;
   text-align: center;
@@ -97,31 +98,53 @@ export const BtnSpan = styled.span`
 `;
 
 export const TypoSignUpStyled = styled(Typography)`
-  color: ${(p) => p.theme.colors.blackColor};
+  color: ${(p) => p.theme.colors.black};
 `;
 
 export const TypoTitleSignUpStyled = styled(Typography)`
-  color: ${(p) => p.theme.colors.whiteColor};
+  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
   font-family: ${primaryFont};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.36px;
+
+  transition: all var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    cursor: pointer;
+  }
+
+  &.active {
+    color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  }
 `;
 
 export const LinkSignUpStyled = styled(Link)`
-  color: ${(p) => p.theme.colors.blackColor};
+  color: ${(p) => p.theme.colors.black};
 `;
 
-export const LoginLink = styled.a`
-  color: ${(p) => p.theme.colors.whiteColor};
+export const LoginLink = styled(StyledLink)`
+  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
   font-family: ${primaryFont};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.36px;
+
+  transition: all var(--primary-transition);
+
+  &:hover {
+    color: ${(p) => p.theme.colors.mainHeaderTextColor};
+    cursor: pointer;
+  }
+
+  &.active {
+    color: ${(p) => p.theme.colors.mainHeaderTextColor};
+  }
 `;
 
 export const TextFieldSignUpStyled = styled(TextField)`
@@ -138,7 +161,7 @@ export const TextFieldSignUpStyled = styled(TextField)`
 
   input {
     border-radius: 0.4rem;
-    color: ${(p) => p.theme.colors.whiteColor};
+    color: ${(p) => p.theme.colors.mainHeaderTextColor};
     font-family: ${primaryFont};
     font-size: 14px;
     font-style: normal;
@@ -157,7 +180,7 @@ export const TextFieldSignUpStyled = styled(TextField)`
     }
 
     &::placeholder {
-      color: ${(p) => p.theme.colors.whiteColor};
+      color: ${(p) => p.theme.colors.mainHeaderTextColor};
       font-family: ${primaryFont};
       font-style: normal;
       font-weight: 400;
@@ -203,7 +226,7 @@ export const EyeIconSignUpWrapper = styled.span`
 
   transform: translateY(-35%);
   font-size: 2rem;
-  color: ${(p) => p.theme.colors.whiteColor};
+  color: ${(p) => p.theme.colors.white};
 
   &:hover {
     cursor: pointer;

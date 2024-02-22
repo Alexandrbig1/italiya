@@ -1,3 +1,3 @@
-import{u as o,j as t}from"./index-CcZWFtyy.js";const n=o.div`
+import{u as o,j as t}from"./index-Dry7BwFM.js";const n=o.div`
   display: block;
 `;function s(){return t.jsx(n,{children:"404 OOops Page Not Found!"})}export{s as default};

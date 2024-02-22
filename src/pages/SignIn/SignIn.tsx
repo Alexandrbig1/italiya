@@ -148,13 +148,13 @@ export default function SignIn() {
                   position: "relative",
                 }}
               >
-                <RegistrationLink href="signup">
+                <RegistrationLink to="/italiya/signup">
                   {/* <RegistrationLink href="signup" variant="body2"> */}
-                  Registration
+                  Sign Up
                 </RegistrationLink>
                 <TypoTitleStyled variant="h5">
                   {/* <TypoTitleStyled component="h1" variant="h5"> */}
-                  Log In
+                  Sign In
                 </TypoTitleStyled>
                 {/* <Google /> */}
               </Box>

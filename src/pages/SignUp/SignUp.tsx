@@ -157,10 +157,10 @@ export default function SignUp() {
                 }}
               >
                 <TypoTitleSignUpStyled component="h1" variant="h5">
-                  Registration
+                  Sign Up
                 </TypoTitleSignUpStyled>
-                <LoginLink href="signin" variant="body2">
-                  Log In
+                <LoginLink to="/italiya/signin" variant="body2">
+                  Sign In
                 </LoginLink>
                 {/* <Google /> */}
               </Box>

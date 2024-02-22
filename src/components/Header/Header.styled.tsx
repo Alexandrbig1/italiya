@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { primaryFont, secondaryFont } from "../fonts";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export const HeaderContainer = styled.header`
   background-color: ${(p) => p.theme.colors.mainHeaderBg};
@@ -36,7 +36,7 @@ export const HeaderMenuText = styled(Link)`
   }
 `;
 
-export const SignIn = styled(Link)`
+export const SignIn = styled(NavLink)`
   background-color: ${(p) => p.theme.colors.signInBgBtn};
   color: ${(p) => p.theme.colors.signTextBtn};
   border-radius: 0.8rem;
@@ -55,7 +55,7 @@ export const SignIn = styled(Link)`
   }
 `;
 
-export const SignUp = styled(Link)`
+export const SignUp = styled(NavLink)`
   background-color: ${(p) => p.theme.colors.signUpBgBtn};
   color: ${(p) => p.theme.colors.signTextBtn};
   border-radius: 0.8rem;
