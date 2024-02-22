@@ -1,17 +1,23 @@
 {
   "name": "italiya",
   "author": "Alex Smagin",
-  "description": "This is a fullstack web app for shopping",
+  "description": "Italiya's Whisker Wonders Fullstack Project – Explore the enchanting world where feline magic meets delightful treasures. This project includes both the frontend and backend components, providing a seamless online platform for cat enthusiasts.",
   "homepage": "http://Alexandrbig1.github.io/italiya",
+  "main": "main.tsx",
   "keywords": [
     "frontend",
     "backend",
     "fullstack",
     "react",
-    "vite"
+    "vite",
+    "italiya",
+    "whisker wonders",
+    "cat-themed",
+    "charming",
+    "joy of cats"
   ],
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

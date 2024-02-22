@@ -116,15 +116,21 @@ export default function SignUp() {
       <HelmetProvider>
         <Helmet>
           <title>Italiya - Sign Up</title>
-          <meta name="description" content="Join Italiya's website!" />
-
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <meta
+            name="description"
+            content="Join Italiya's Whisker Wonders website and become part of the cat-loving community. Explore a world of delightful cat-themed treasures."
+          />
 
-          <meta property="og:title" content="Italiya - Sign Up" />
-          <meta property="og:description" content="Join Italiya's website" />
+          <meta property="og:type" content="website" />
+          <meta property="og:title" content="Join Italiya's Whisker Wonders" />
+          <meta
+            property="og:description"
+            content="Join Italiya's Whisker Wonders website and become part of the cat-loving community. Explore a world of delightful cat-themed treasures."
+          />
           <meta
             property="og:url"
             content="https://alexandrbig1.github.io/italiya/"

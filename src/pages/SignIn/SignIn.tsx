@@ -106,21 +106,26 @@ export default function SignIn() {
       <HelmetProvider>
         <Helmet>
           <title>Italiya - Sign In</title>
-          <meta name="description" content="Sign in to Italiya's website" />
-
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-
-          <meta property="og:title" content="Italiya - Sign In" />
-          <meta
-            property="og:description"
-            content="Sign in to Italiya's website"
-          />
           <meta
             property="og:url"
             content="https://alexandrbig1.github.io/italiya/"
+          />
+          <meta
+            name="description"
+            content="Sign in to Italiya's Whisker Wonders website and explore a world of cat-themed treasures."
+          />
+          <meta
+            property="og:title"
+            content="Italiya's Whisker Wonders - Sign In"
+          />
+          <meta property="og:type" content="website" />
+          <meta
+            property="og:description"
+            content="Sign in to Italiya's Whisker Wonders website and explore a world of cat-themed treasures."
           />
         </Helmet>
       </HelmetProvider>
