@@ -20,6 +20,8 @@ import {
   BtnLogInSpan,
 } from "./SignIn.styled";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { logIn } from "../../redux/auth/operations";
 
 const customTheme = createTheme({
   breakpoints: {
@@ -58,48 +60,44 @@ function Copyright(props) {
 export default function SignIn() {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const dispatch = useDispatch();
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
   };
 
-  function handleSubmit(e) {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
-  }
+    const form = e.currentTarget;
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
 
-  //   const email = form.elements.email.value;
-  //   const password = form.elements.password.value;
+    const newErrors = {};
 
-  //   const newErrors = {};
+    if (email.trim().length === 0) {
+      newErrors.email = "Email address is required";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
 
-  //   if (email.trim().length === 0) {
-  //     newErrors.email = "Email address is required";
-  //   } else if (!emailRegex.test(email)) {
-  //     newErrors.email = "Please enter a valid email address";
-  //   }
+    if (password.length < 6 || password.length > 20) {
+      newErrors.password = "Password must be between 6 and 20 characters";
+    }
 
-  //   if (password.length < 6 || password.length > 18) {
-  //     newErrors.password = "Password must be between 6 and 18 characters";
-  //   }
+    setErrors(newErrors);
 
-  //   setErrors(newErrors);
-
-  //   if (Object.keys(newErrors).length === 0) {
-  //     setErrors({});
-  //     dispatch(
-  //       logIn({
-  //         email: email,
-  //         password: password,
-  //       })
-  //     );
-  //     form.reset();
-  //   }
-  // };
+    if (Object.keys(newErrors).length === 0) {
+      setErrors({});
+      dispatch(
+        logIn({
+          email,
+          password,
+        })
+      );
+      form.reset();
+    }
+  };
 
   return (
     <>
@@ -148,14 +146,14 @@ export default function SignIn() {
                   position: "relative",
                 }}
               >
-                <TypoTitleStyled variant="h5">
-                  {/* <TypoTitleStyled component="h1" variant="h5"> */}
-                  Sign In
-                </TypoTitleStyled>
                 <RegistrationLink to="/italiya/signup">
                   {/* <RegistrationLink href="signup" variant="body2"> */}
                   Sign Up
                 </RegistrationLink>
+                <TypoTitleStyled variant="h5">
+                  {/* <TypoTitleStyled component="h1" variant="h5"> */}
+                  Sign In
+                </TypoTitleStyled>
                 {/* <Google /> */}
               </Box>
               <Box

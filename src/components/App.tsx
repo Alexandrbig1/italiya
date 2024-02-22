@@ -3,12 +3,16 @@ import FontsHelmet from "./FontsHelmnet";
 import { ThemeProvider } from "styled-components";
 import { lazy, useState } from "react";
 import RootLayout from "../layouts/RootLayout/RootLayout";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   Route,
   RouterProvider,
   createBrowserRouter,
   createRoutesFromElements,
 } from "react-router-dom";
+import { RestrictedRoute } from "./RestrictRoute";
+import { PrivateRoute } from "./PrivateRoute";
 
 const themes = {
   light: {
@@ -125,19 +129,30 @@ function App() {
         path="/italiya/"
         element={<RootLayout toggleTheme={toggleTheme} />}
       >
-        <Route path="" element={<Home toggleTheme={toggleTheme} />}>
-          <Route
-            path="products"
-            element={<Products toggleTheme={toggleTheme} />}
-          />
+        <Route path="" element={<Home />}>
+          <Route path="products" element={<Products />} />
         </Route>
-        <Route path="cart" element={<Cart toggleTheme={toggleTheme} />} />
-
-        <Route path="signin" element={<SignIn />} />
-        <Route path="signup" element={<SignUp />} />
-        <Route path="privacy" element={<Privacy toggleTheme={toggleTheme} />} />
-        <Route path="terms" element={<Terms toggleTheme={toggleTheme} />} />
-        <Route path="*" element={<NotFound toggleTheme={toggleTheme} />} />
+        <Route
+          path="cart"
+          element={
+            <PrivateRoute redirectTo="/italiya/signin" component={<Cart />} />
+          }
+        />
+        <Route
+          path="signin"
+          element={
+            <RestrictedRoute redirectTo="/italiya/" component={<SignIn />} />
+          }
+        />
+        <Route
+          path="signup"
+          element={
+            <RestrictedRoute redirectTo="/italiya/" component={<SignUp />} />
+          }
+        />
+        <Route path="privacy" element={<Privacy />} />
+        <Route path="terms" element={<Terms />} />
+        <Route path="*" element={<NotFound />} />
       </Route>
     )
   );
@@ -146,6 +161,7 @@ function App() {
     <ThemeProvider theme={themes[currentTheme]}>
       <GlobalStyle />
       <FontsHelmet />
+      <ToastContainer />
       <RouterProvider router={router} />
     </ThemeProvider>
   );

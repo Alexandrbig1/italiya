@@ -23,6 +23,8 @@ import {
   PasswordErrorMessage,
 } from "./SignUp.styled";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { register } from "../../redux/auth/operations";
 
 const customTheme = createTheme({
   breakpoints: {
@@ -61,6 +63,7 @@ function Copyright(props) {
 export default function SignUp() {
   const [showPassword, setShowPassword] = useState(false);
   const [errors, setErrors] = useState({});
+  const dispatch = useDispatch();
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
@@ -68,48 +71,44 @@ export default function SignUp() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(e);
+    const form = e.currentTarget;
+
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const password = form.elements.password.value;
+
+    const newErrors = {};
+
+    if (name.trim().length === 0) {
+      newErrors.name = "Name is required";
+    } else if (name.trim().length < 3) {
+      newErrors.name = "Name must be at least 3 characters";
+    }
+
+    if (email.trim().length === 0) {
+      newErrors.email = "Email address is required";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    if (password.length < 6 || password.length > 20) {
+      newErrors.password = "Password must be between 6 and 20 characters";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      setErrors({});
+      dispatch(
+        register({
+          name,
+          email,
+          password,
+        })
+      );
+      form.reset();
+    }
   };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const form = e.currentTarget;
-
-  //   const name = form.elements.name.value;
-  //   const email = form.elements.email.value;
-  //   const password = form.elements.password.value;
-
-  //   const newErrors = {};
-
-  //   if (name.trim().length === 0) {
-  //     newErrors.name = "Name is required";
-  //   } else if (name.trim().length < 3) {
-  //     newErrors.name = "Name must be at least 3 characters";
-  //   }
-
-  //   if (email.trim().length === 0) {
-  //     newErrors.email = "Email address is required";
-  //   } else if (!emailRegex.test(email)) {
-  //     newErrors.email = "Please enter a valid email address";
-  //   }
-
-  //   if (password.length < 6 || password.length > 18) {
-  //     newErrors.password = "Password must be between 6 and 18 characters";
-  //   }
-
-  //   setErrors(newErrors);
-
-  //   if (Object.keys(newErrors).length === 0) {
-  //     setErrors({});
-  //     dispatch(
-  //       register({
-  //         name: name,
-  //         email: email,
-  //         password: password,
-  //       })
-  //     );
-  //     form.reset();
-  //   }
-  // };
 
   return (
     <>
@@ -156,10 +155,10 @@ export default function SignUp() {
                   position: "relative",
                 }}
               >
-                <LoginLink to="/italiya/signin">Sign In</LoginLink>
                 <TypoTitleSignUpStyled variant="h5">
                   Sign Up
                 </TypoTitleSignUpStyled>
+                <LoginLink to="/italiya/signin">Sign In</LoginLink>
                 {/* <Google /> */}
               </Box>
               <Box
