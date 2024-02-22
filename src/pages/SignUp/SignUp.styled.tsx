@@ -102,7 +102,7 @@ export const TypoSignUpStyled = styled(Typography)`
 `;
 
 export const TypoTitleSignUpStyled = styled(Typography)`
-  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
   font-family: ${primaryFont};
   font-size: 18px;
   font-style: normal;

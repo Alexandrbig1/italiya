@@ -112,10 +112,6 @@ export const RegistrationLink = styled(StyledLink)`
     color: ${(p) => p.theme.colors.mainHeaderTextColor};
     cursor: pointer;
   }
-
-  &.active {
-    color: ${(p) => p.theme.colors.mainHeaderTextColor};
-  }
 `;
 
 export const TypoStyled = styled(Typography)`
@@ -123,7 +119,7 @@ export const TypoStyled = styled(Typography)`
 `;
 
 export const TypoTitleStyled = styled(Typography)`
-  color: ${(p) => p.theme.colors.mainHeaderTextColorLowOp};
+  color: ${(p) => p.theme.colors.mainHeaderTextColor};
   font-family: ${primaryFont};
   font-size: 18px;
   font-style: normal;
@@ -136,10 +132,6 @@ export const TypoTitleStyled = styled(Typography)`
   &:hover {
     color: ${(p) => p.theme.colors.mainHeaderTextColor};
     cursor: pointer;
-  }
-
-  &.active {
-    color: ${(p) => p.theme.colors.mainHeaderTextColor};
   }
 `;
 

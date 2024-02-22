@@ -156,10 +156,8 @@ export default function SignUp() {
                   position: "relative",
                 }}
               >
-                <LoginLink to="/italiya/signin" variant="body2">
-                  Sign In
-                </LoginLink>
-                <TypoTitleSignUpStyled component="h1" variant="h5">
+                <LoginLink to="/italiya/signin">Sign In</LoginLink>
+                <TypoTitleSignUpStyled variant="h5">
                   Sign Up
                 </TypoTitleSignUpStyled>
                 {/* <Google /> */}
