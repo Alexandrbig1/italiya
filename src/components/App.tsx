@@ -124,8 +124,8 @@ function App() {
         </Route>
         <Route path="cart" element={<Cart toggleTheme={toggleTheme} />} />
 
-        <Route path="signin" element={<SignIn toggleTheme={toggleTheme} />} />
-        <Route path="signup" element={<SignUp toggleTheme={toggleTheme} />} />
+        <Route path="signin" element={<SignIn />} />
+        <Route path="signup" element={<SignUp />} />
         <Route path="privacy" element={<Privacy toggleTheme={toggleTheme} />} />
         <Route path="terms" element={<Terms toggleTheme={toggleTheme} />} />
         <Route path="*" element={<NotFound toggleTheme={toggleTheme} />} />
