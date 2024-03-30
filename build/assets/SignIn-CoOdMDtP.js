@@ -1,4 +1,4 @@
-import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js";import{B as n,a as w,L as f,T as m,b as y,c as b,F as j,d as C,e as v,f as S}from"./SignUp.styled-Du3W94Ts.js";const $=o(n)`
+import{u as r,p as n,L as b,b as h,e as j,j as t,H as v,f as C,l as S}from"./index-HWnmdXEh.js";import{B as s,a as $,L as T,T as g,b as k,c as I,F as B,d as E,e as F,f as H,g as W}from"./emailRegex-Dhacmtq_.js";const z=r(s)`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -13,7 +13,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
     rgba(196, 196, 196, 0) 2%,
     ${e=>e.theme.colors.mainBgColor} 98%
   );
-`,T=o(n)`
+`,L=r(s)`
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -30,12 +30,12 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
     padding: 4rem;
     max-width: 424px;
   }
-`;o(n)`
+`;r(s)`
   width: 100%;
-`;const k=o(w)`
+`;const P=r($)`
   width: 100%;
   height: 4.9rem;
-`,I=o.div`
+`,q=r.div`
   width: 100%;
   max-width: 260px;
 
@@ -62,20 +62,20 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
   &:hover {
     background-color: ${e=>e.theme.colors.signUpBgHoverBtn};
   }
-`,B=o.span`
+`,D=r.span`
   color: ${e=>e.theme.colors.white};
-  font-family: ${i};
+  font-family: ${n};
   font-size: 1.4rem;
   text-align: center;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.28px;
-`,F=o(f)`
+`,O=r(T)`
   color: ${e=>e.theme.colors.accentColor};
-`,H=o(x)`
+`,R=r(b)`
   color: ${e=>e.theme.colors.mainHeaderTextColorLowOp};
-  font-family: ${i};
+  font-family: ${n};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -88,11 +88,11 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
     color: ${e=>e.theme.colors.mainHeaderTextColor};
     cursor: pointer;
   }
-`,W=o(m)`
+`,U=r(g)`
   color: ${e=>e.theme.colors.blackColor};
-`,z=o(m)`
+`,Y=r(g)`
   color: ${e=>e.theme.colors.mainHeaderTextColor};
-  font-family: ${i};
+  font-family: ${n};
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -105,7 +105,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
     color: ${e=>e.theme.colors.mainHeaderTextColor};
     cursor: pointer;
   }
-`,l=o(y)`
+`,p=r(k)`
   width: 100%;
   max-width: 260px;
 
@@ -120,7 +120,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
   input {
     border-radius: 0.4rem;
     color: ${e=>e.theme.colors.mainHeaderTextColor};
-    font-family: ${i};
+    font-family: ${n};
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -139,7 +139,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
 
     &::placeholder {
       color: ${e=>e.theme.colors.mainHeaderTextColor};
-      font-family: ${i};
+      font-family: ${n};
       font-style: normal;
       font-weight: 400;
       line-height: normal;
@@ -161,7 +161,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
     border: 1px solid
       ${e=>e.error?e.theme.colors.errorColor:e.theme.colors.inputColor};
   }
-`,E=o.div`
+`,A=r.div`
   position: relative;
   width: 100%;
   max-width: 256px;
@@ -173,7 +173,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
   @media (min-width: 768px) {
     max-width: 344px;
   }
-`,L=o.span`
+`,M=r.span`
   position: absolute;
   top: 50%;
   right: 1.2rem;
@@ -185,7 +185,7 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
   &:hover {
     cursor: pointer;
   }
-`,d=o.p`
+`,x=r.p`
   position: absolute;
   top: -0.4rem;
   right: 0;
@@ -195,4 +195,4 @@ import{u as o,p as i,L as x,b as s,j as t,H as g,e as u}from"./index-B8p4UyuZ.js
   @media (min-width: 768px) {
     font-size: 1.2rem;
   }
-`,P=S({breakpoints:{values:{xs:0,sm:550,md:960,lg:1280,xl:1920}}});function q(e){return t.jsxs(W,{variant:"body2",align:"center",...e,style:{fontSize:"1rem"},children:["Alex Smagin © ",t.jsx(F,{color:"inherit",href:"https://alexandrbig1.github.io/italiya/",target:"_blank",children:"Italiya"})," ",new Date().getFullYear(),"."]})}function U(){const[e,c]=s.useState(!1),[r,D]=s.useState({}),h=()=>{c(!e)};function p(a){a.preventDefault(),console.log(a)}return t.jsxs(t.Fragment,{children:[t.jsx(g,{children:t.jsxs(u,{children:[t.jsx("title",{children:"Italiya - Sign In"}),t.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1.0"}),t.jsx("meta",{property:"og:url",content:"https://alexandrbig1.github.io/italiya/"}),t.jsx("meta",{name:"description",content:"Sign in to Italiya's Whisker Wonders website and explore a world of cat-themed treasures."}),t.jsx("meta",{property:"og:title",content:"Italiya's Whisker Wonders - Sign In"}),t.jsx("meta",{property:"og:type",content:"website"}),t.jsx("meta",{property:"og:description",content:"Sign in to Italiya's Whisker Wonders website and explore a world of cat-themed treasures."})]})}),t.jsx(b,{theme:P,children:t.jsxs($,{children:[t.jsx("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",padding:"1.2rem"},children:t.jsxs(T,{children:[t.jsxs(n,{style:{display:"flex",alignItems:"center",gap:"1.4rem",position:"relative"},children:[t.jsx(z,{variant:"h5",children:"Sign In"}),t.jsx(H,{to:"/italiya/signup",children:"Sign Up"})]}),t.jsxs(n,{component:"form",onSubmit:p,noValidate:!0,sx:{mt:2,width:{sm:"376px",xs:"312px"}},children:[t.jsxs(j,{children:[t.jsx(l,{margin:"normal",required:!0,fullWidth:!0,id:"email",placeholder:"Enter your email",name:"email",autoComplete:"email",autoFocus:!0,error:!!r.email}),r.email&&t.jsx(d,{children:r.email})]}),t.jsxs(E,{children:[t.jsx(l,{placeholder:"Confirm a password",variant:"outlined",margin:"normal",required:!0,fullWidth:!0,name:"password",id:"password",autoComplete:"current-password",type:e?"text":"password",error:!!r.password}),r.password&&t.jsx(d,{children:r.password}),t.jsx(L,{onClick:h,children:e?t.jsx(C,{}):t.jsx(v,{})})]}),t.jsx(I,{children:t.jsx(k,{type:"submit",color:"inherit",children:t.jsx(B,{children:"Log In Now"})})})]})]})}),t.jsx(q,{sx:{mt:8,mb:4}})]})})]})}export{U as default};
+`,N=H({breakpoints:{values:{xs:0,sm:550,md:960,lg:1280,xl:1920}}});function V(e){return t.jsxs(U,{variant:"body2",align:"center",...e,style:{fontSize:"1rem"},children:["Alex Smagin © ",t.jsx(O,{color:"inherit",href:"https://alexandrbig1.github.io/italiya/",target:"_blank",children:"Italiya"})," ",new Date().getFullYear(),"."]})}function J(){const[e,u]=h.useState(!1),[o,m]=h.useState({}),w=j(),f=()=>{u(!e)},y=c=>{c.preventDefault();const a=c.currentTarget,l=a.elements.email.value,d=a.elements.password.value,i={};l.trim().length===0?i.email="Email address is required":W.test(l)||(i.email="Please enter a valid email address"),(d.length<6||d.length>20)&&(i.password="Password must be between 6 and 20 characters"),m(i),Object.keys(i).length===0&&(m({}),w(S({email:l,password:d})),a.reset())};return t.jsxs(t.Fragment,{children:[t.jsx(v,{children:t.jsxs(C,{children:[t.jsx("title",{children:"Italiya - Sign In"}),t.jsx("meta",{name:"viewport",content:"width=device-width, initial-scale=1.0"}),t.jsx("meta",{property:"og:url",content:"https://alexandrbig1.github.io/italiya/"}),t.jsx("meta",{name:"description",content:"Sign in to Italiya's Whisker Wonders website and explore a world of cat-themed treasures."}),t.jsx("meta",{property:"og:title",content:"Italiya's Whisker Wonders - Sign In"}),t.jsx("meta",{property:"og:type",content:"website"}),t.jsx("meta",{property:"og:description",content:"Sign in to Italiya's Whisker Wonders website and explore a world of cat-themed treasures."})]})}),t.jsx(I,{theme:N,children:t.jsxs(z,{children:[t.jsx("div",{style:{display:"flex",alignItems:"center",justifyContent:"center",padding:"1.2rem"},children:t.jsxs(L,{children:[t.jsxs(s,{style:{display:"flex",alignItems:"center",gap:"1.4rem",position:"relative"},children:[t.jsx(R,{to:"/italiya/signup",children:"Sign Up"}),t.jsx(Y,{variant:"h5",children:"Sign In"})]}),t.jsxs(s,{component:"form",onSubmit:y,noValidate:!0,sx:{mt:2,width:{sm:"376px",xs:"312px"}},children:[t.jsxs(B,{children:[t.jsx(p,{margin:"normal",required:!0,fullWidth:!0,id:"email",placeholder:"Enter your email",name:"email",autoComplete:"email",autoFocus:!0,error:!!o.email}),o.email&&t.jsx(x,{children:o.email})]}),t.jsxs(A,{children:[t.jsx(p,{placeholder:"Confirm a password",variant:"outlined",margin:"normal",required:!0,fullWidth:!0,name:"password",id:"password",autoComplete:"current-password",type:e?"text":"password",error:!!o.password}),o.password&&t.jsx(x,{children:o.password}),t.jsx(M,{onClick:f,children:e?t.jsx(E,{}):t.jsx(F,{})})]}),t.jsx(q,{children:t.jsx(P,{type:"submit",color:"inherit",children:t.jsx(D,{children:"Log In Now"})})})]})]})}),t.jsx(V,{sx:{mt:8,mb:4}})]})})]})}export{J as default};

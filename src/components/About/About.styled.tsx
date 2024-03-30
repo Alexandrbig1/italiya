@@ -46,6 +46,9 @@ export const AboutTextWrapper = styled.div`
 export const AboutHomeWrapper = styled.div`
   padding: 0 2.4rem;
   margin-top: 5.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 `;
 
 export const AboutTitle = styled.h1`
