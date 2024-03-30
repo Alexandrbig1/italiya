@@ -1,4 +1,4 @@
-import{u as r,r as t,p as i,a,j as e,L as s,b as c,O as l,C as d}from"./index-HWnmdXEh.js";const m="/italiya/assets/paws-CFqkmwH1.png",h=r.div`
+import{u as r,r as t,p as n,a,j as e,L as s,b as c,O as l,C as d}from"./index-mBbPgKR3.js";const m="/italiya/assets/paws-CFqkmwH1.png",h=r.div`
   display: grid;
   grid-template-columns: 1.5fr 2.5fr;
   gap: 4.8rem;
@@ -34,6 +34,9 @@ import{u as r,r as t,p as i,a,j as e,L as s,b as c,O as l,C as d}from"./index-HW
 `,f=r.div`
   padding: 0 2.4rem;
   margin-top: 5.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
 `,x=r.h1`
   font-family: ${t};
   font-weight: 500;
@@ -58,7 +61,7 @@ import{u as r,r as t,p as i,a,j as e,L as s,b as c,O as l,C as d}from"./index-HW
   color: ${o=>o.theme.colors.white};
   cursor: pointer;
   font-size: 1.6rem;
-  font-family: ${i};
+  font-family: ${n};
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.28px;
@@ -68,7 +71,7 @@ import{u as r,r as t,p as i,a,j as e,L as s,b as c,O as l,C as d}from"./index-HW
   &:hover {
     background-color: ${o=>o.theme.colors.signUpBgHoverBtn};
   }
-`;function j(){const n=a().pathname==="/italiya/";return e.jsxs(h,{children:[e.jsx(u,{children:e.jsx(g,{src:"./images/italiya.jpg",alt:"Hello, My name is Italiya, I'm a lovely orange cat"})}),e.jsx(p,{children:n?e.jsxs(f,{children:[e.jsx(x,{children:"Meet Italiya: The Purrsonality Behind Whisker Wonders"}),e.jsx(b,{children:"Step into the enchanting world of Italiya, our charismatic orange cat. Indulge in whisker wonders with our curated collection of cat-themed treasures — cozy t-shirts, charming cups, and delightful souvenirs. Embrace feline magic and bring a touch of Italiya's charm into your everyday moments. Explore, shop, and immerse yourself in the joy of cats!"}),e.jsx(y,{children:e.jsx(s,{to:"products",children:"showproducts"})})]}):e.jsx(c.Suspense,{children:e.jsx(l,{})})})]})}const w=r.div`
+`;function j(){const i=a().pathname==="/italiya/";return e.jsxs(h,{children:[e.jsx(u,{children:e.jsx(g,{src:"./images/italiya.jpg",alt:"Hello, My name is Italiya, I'm a lovely orange cat"})}),e.jsx(p,{children:i?e.jsxs(f,{children:[e.jsx(x,{children:"Meet Italiya: The Purrsonality Behind Whisker Wonders"}),e.jsx(b,{children:"Step into the enchanting world of Italiya, our charismatic orange cat. Indulge in whisker wonders with our curated collection of cat-themed treasures — cozy t-shirts, charming cups, and delightful souvenirs. Embrace feline magic and bring a touch of Italiya's charm into your everyday moments. Explore, shop, and immerse yourself in the joy of cats!"}),e.jsx(y,{children:e.jsx(s,{to:"products",children:"showproducts"})})]}):e.jsx(c.Suspense,{children:e.jsx(l,{})})})]})}const w=r.div`
   display: block;
   background-color: ${o=>o.theme.colors.mainBgColor};
 `;function v(){return e.jsx(w,{children:e.jsx(d,{children:e.jsx(j,{})})})}export{v as default};
